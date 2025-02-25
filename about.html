@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Basic Styles for About Page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('images/index.jpg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Stack containers on smaller screens */
+            margin: 100px 0 20px; /* Added top margin for gap between header and row */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            width: 15%; /* Reduced container width */
+            padding: 15px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            transform: translateX(-20px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateX(0);
+        }
+
+        .container img {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .container h3 {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .container p {
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* Animation for fading in */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                width: 40%; /* Adjust width for smaller screens */
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            color: white;
+            padding: 15px 30px; /* Reduced padding */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: headerAnimation 1s ease-out;
+        }
+
+        @keyframes headerAnimation {
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .left-text {
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px; /* Reduced gap */
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px; /* Reduced padding */
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 16px; /* Reduced font size */
+        }
+
+        .nav-buttons a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<header>
+    <div class="left-text">Multi Language Translator</div>
+    <div class="nav-buttons">
+        <a href="index1.html">Home</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="http://127.0.0.1:5000">Translator</a>
+    </div>
+</header>
+
+<body>
+
+    <!-- Single Row of Containers -->
+    <div class="container-row">
+        <div class="container">
+            <img src="images/hreflang.png" alt="Image 1">
+            <h3>Language Support</h3>
+            <p>Supports multiple languages to help you communicate globally.</p>
+        </div>
+
+        <div class="container">
+            <img src="images/translate.png" alt="Image 2">
+            <h3>Fast Translation</h3>
+            <p>Get instant translations with just a click of a button.</p>
+        </div>
+
+        <div class="container">
+            <img src="images/translator.png" alt="Image 3">
+            <h3>Accurate Results</h3>
+            <p>Our tool provides accurate translations for both short and long text.</p>
+        </div>
+
+        <div class="container">
+            <img src="images/language-switcher.png" alt="Image 4">
+            <h3>Easy Language Switching</h3>
+            <p>Switch between different languages effortlessly with a user-friendly interface.</p>
+        </div>
+
+        <div class="container">
+            <img src="images/easy.jpg" alt="Image 5">
+            <h3>Easy to use</h3>
+            <p>Translate text seamlessly into various languages with ease..</p>
+        </div>
+
+        <div class="container">
+            <img src="images/voice.webp" alt="Image 6">
+            <h3>Voice Translation</h3>
+            <p>Translate spoken words seamlessly into your desired language.</p>
+        </div>
+
+        <div class="container">
+            <img src="images/offline.png" alt="Image 7">
+            <h3>Offline Mode</h3>
+            <p>Translate text even without an active internet connection.</p>
+        </div>
+
+        <div class="container">
+            <img src="images/custom.jpg" alt="Image 8">
+            <h3>Custom Dictionary</h3>
+            <p>Add your frequently used phrases for faster translations.</p>
+        </div>
+    </div>
+
+</body>
+</html>

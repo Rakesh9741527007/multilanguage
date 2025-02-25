@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+            background-image: url('images/index.jpg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .right-container {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .contact-form label {
+            font-size: 1em;
+            margin: 10px 0 5px;
+            display: block;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .left-container {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-container h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .left-container a {
+            display: block;
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .left-container a:hover {
+            color: #0056b3;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            color: white;
+            padding: 15px 30px; /* Reduced padding */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: headerAnimation 1s ease-out;
+        }
+
+        @keyframes headerAnimation {
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .left-text {
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px; /* Reduced gap */
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px; /* Reduced padding */
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 16px; /* Reduced font size */
+        }
+
+        .nav-buttons a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<header>
+    <div class="left-text">Multi Language Translator</div>
+    <div class="nav-buttons">
+        <a href="index1.html">Home</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="http://127.0.0.1:5000">Translator</a>
+    </div>
+</header>
+
+<body>
+
+    <div class="container">
+        <!-- Right Container -->
+        <div class="right-container">
+            <form class="contact-form" onsubmit="redirectToWhatsApp(event)">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+
+                <label for="contact">Chinnappagouda S Patil's Contact</label>
+                <input type="text" id="contact" value="6360767764" readonly>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Left Container -->
+        <div class="left-container">
+            <h1>For more information contact:</h1>
+            <a href="https://wa.me/9741527007?text=Hello%20Rakesh%2C%20I%20need%20information." target="_blank">Rakesh Sanshi</a>
+            <a href="https://wa.me/8618232355?text=Hello%20Omkar%2C%20I%20need%20information." target="_blank">Omkar S Bhavikatti</a>
+            <a href="https://wa.me/7411209641?text=Hello%20Vinayak%2C%20I%20need%20information." target="_blank">Vinayak Vitthal Devamane</a>
+        </div>
+    </div>
+
+    <script>
+        function redirectToWhatsApp(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const contact = document.getElementById('contact').value;
+
+            // Format the WhatsApp message
+            const whatsappMessage = `Hello,%20My%20name%20is%20${encodeURIComponent(name)}.%0A` +
+                                    `Email:%20${encodeURIComponent(email)}%0A` +
+                                    `Message:%20${encodeURIComponent(message)}`;
+
+            // Redirect to WhatsApp
+            const whatsappURL = `https://wa.me/${contact}?text=${whatsappMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+
+</body>
+</html>

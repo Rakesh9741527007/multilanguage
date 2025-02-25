@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/index.jpg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            color: white;
+            padding: 15px 30px; /* Reduced padding */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: headerAnimation 1s ease-out;
+        }
+
+        @keyframes headerAnimation {
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .left-text {
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px; /* Reduced gap */
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px; /* Reduced padding */
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 16px; /* Reduced font size */
+        }
+
+        .nav-buttons a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main content container */
+        .main-container {
+            margin-top: 420px; /* Adjusted for the reduced header gap */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 80%;
+            text-align: center;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-out;
+            transform: translateY(-20px);
+        }
+
+        .intro-section h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .intro-section p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* New Container for Multi-Language Translator Info */
+        .multi-translator-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            width: 70%;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .multi-translator-container p {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Animation for fading in */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .intro-section {
+                width: 90%; /* Make intro section responsive */
+            }
+
+            .nav-buttons a {
+                font-size: 14px; /* Adjust font size on smaller screens */
+                padding: 8px 15px; /* Adjust padding */
+            }
+
+            .multi-translator-container {
+                width: 90%; /* Make it responsive */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="left-text">Multi Language Translator</div>
+        <div class="nav-buttons">
+            <a href="index1.html">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="http://127.0.0.1:5000">Translator</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-container">
+        
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <h1>Welcome to the Multi-Language Translator</h1>
+            <p>Experience seamless communication across the globe with our powerful multi-language translation tool. Translate texts, phrases, and even full documents instantly. Our platform supports a variety of languages to bridge the gap and make the world more connected.</p>
+        </div>
+
+        <!-- Multi-Language Translator Information -->
+        <div class="multi-translator-container">
+            <p>The Multi-Language Translator is a cutting-edge tool designed to break down language barriers across the world. It allows users to easily translate texts, documents, and conversations in real-time, ensuring efficient communication. With support for numerous languages, our translator is both user-friendly and reliable, helping individuals and businesses communicate seamlessly across cultures.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
